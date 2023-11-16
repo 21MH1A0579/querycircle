@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:querycircle/screens/screen3/AboutCollage.dart';
 
-import '../widgets/chat_messages.dart';
-import '../widgets/new_message.dart';
+import '../../widgets/chat_messages.dart';
+import '../../widgets/new_message.dart';
+
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -32,23 +32,19 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
         appBar: AppBar(
-          title: Text("Ask Your Quries"),
-          backgroundColor: Colors.black,actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 10),
-            child: GestureDetector(
-              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutCollage())),
-              child: CircleAvatar(
-                radius: 25,
-                backgroundImage: AssetImage("asserts/adityalogo.jpg"),
-
-              ),
+          title: const Text("FlutterChat"),
+          actions: [
+            IconButton(
+              onPressed: () {
+                FirebaseAuth.instance.signOut();
+              },
+              icon: const Icon(Icons.exit_to_app,color: Colors.white,),
+              color: Theme.of(context).colorScheme.primary,
             ),
-          )
-        ],),
-        body: const Column(
+          ],
+        ),
+        body:  Column(
           children: [
             Expanded(
               child: ChatMessages(),

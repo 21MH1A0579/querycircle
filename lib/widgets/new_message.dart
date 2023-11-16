@@ -93,6 +93,8 @@ class _NewMessageState extends State<NewMessage> {
             child: Padding(
               padding: const EdgeInsets.only(right: 15),
               child: TextField(
+                cursorColor: Colors.purple,
+                style: TextStyle(color: Colors.white,),
                 controller: _messageController,
                 textCapitalization: TextCapitalization.sentences,
                 autocorrect: true,
@@ -110,12 +112,13 @@ class _NewMessageState extends State<NewMessage> {
                   enabledBorder:OutlineInputBorder(
                     borderSide: BorderSide(
                       width:2,
-                      color: Colors.grey,
+                      color: Colors.purple,
                       style: BorderStyle.solid,
                     ),
                     borderRadius: BorderRadius.circular(15),
                   ),
-                  hintText: "Send a Messagee....",
+                  hintText: "Type Here....",
+                  hintStyle: TextStyle(color: Colors.white),
                   suffixIcon: IconButton(onPressed: (){
                     _submitMessage();
                     setState(() {

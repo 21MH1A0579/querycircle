@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:querycircle/screens/screen3/Screen4.dart';
 
 import 'Screen2.dart';
 import 'Screen3.dart';
@@ -15,17 +16,18 @@ class _HomeScreenState extends State<HomeScreen> {
   final pageoptions=[
     ChatScreen(),
     PostMessages(),
-    Screen3()
+    Screen4()
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: pageoptions[selectedpage],
       bottomNavigationBar: BottomNavigationBar(
+
         elevation:double.infinity,
         currentIndex: selectedpage,
-        selectedItemColor: Colors.green,
-        unselectedItemColor: Colors.blue,
+        selectedItemColor: Colors.purple,
+        unselectedItemColor: Colors.grey,
         onTap: (int index)
         {
           setState(() {

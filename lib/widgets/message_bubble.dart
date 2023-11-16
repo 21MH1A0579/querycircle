@@ -177,7 +177,7 @@ class MessageBubble extends StatelessWidget {
                                 // when multilined.
                                 height: 1.3,
                                 color: isMe
-                                    ? Colors.black
+                                    ? theme.colorScheme.onSecondary
                                     : theme.colorScheme.onSecondary,
                               ),
                               softWrap: true,
