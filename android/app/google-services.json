@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "833444048713",
+    "project_id": "querycircle-b7448",
+    "storage_bucket": "querycircle-b7448.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833444048713:android:01acb42666fbb620a73498",
+        "android_client_info": {
+          "package_name": "com.example.querycircle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-FQbvdaLvGmivlr0OB1fUVQ-YxEnn2iM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
